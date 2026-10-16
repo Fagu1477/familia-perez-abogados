@@ -248,7 +248,6 @@ function showResult() {
 gameNext.addEventListener('click', () => {
   if (gameOptions.hidden) {
     startRound();
-  })();
     gameQuestion.focus({ preventScroll: true });
   } else if (currentCase < roundQuestions.length - 1) {
     currentCase += 1;
@@ -260,3 +259,4 @@ gameNext.addEventListener('click', () => {
 });
 
 startRound();
+})();
