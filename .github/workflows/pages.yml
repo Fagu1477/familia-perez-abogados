@@ -23,7 +23,7 @@ jobs:
       - name: Prepare website files
         run: |
           mkdir _site
-          cp index.html.html _site/index.html
+          cp index.html _site/index.html
           cp style.css.css game.js logo.jpeg _site/
 
       - name: Upload Pages artifact
