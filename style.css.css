@@ -1,0 +1,803 @@
+/* ==========================================================================
+   Variables Globales y Paleta de Colores (Basada en el Logo)
+   ========================================================================== */
+:root {
+  --logo-blue: #4A8BE2;       /* Azul exacto del logo */
+  --logo-green: #3B9B00;      /* Verde exacto del logo */
+  --dark-bg: #1a2332;
+  --light-bg: #f4f7fa;
+  --text-main: #2c3e50;
+  --text-light: #606f7b;
+  --white: #ffffff;
+  --border-color: #e2e8f0;
+  
+  /* Fuentes */
+  --font-heading: 'Merriweather', serif; /* Tipografía formal similar al logo */
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --transition: all 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+p {
+  color: var(--text-light);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Utilitarios de Color */
+.icon-blue { color: var(--logo-blue) !important; }
+.icon-green { color: var(--logo-green) !important; }
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--logo-green);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: #2e7a00;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--logo-blue);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Títulos de Sección */
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2.2rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.section-title h2::after {
+  content: '';
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(to right, var(--logo-green), var(--logo-blue));
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   Barra de Navegación y Logo
+   ========================================================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-logo {
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--logo-green);
+}
+
+.brand-subtitle {
+  font-size: 0.75rem;
+  color: var(--logo-blue);
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--logo-blue);
+}
+
+.btn-nav {
+  background-color: var(--logo-blue);
+  color: var(--white) !important;
+  padding: 8px 18px;
+  border-radius: 4px;
+}
+
+.btn-nav:hover {
+  background-color: #3873c4 !important;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+  height: 85vh;
+  background: #f7f7f7 url('logo.jpeg') right 8% center / clamp(220px, 30vw, 360px) auto no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 86px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(26, 35, 50, 0.92) 0%, rgba(26, 35, 50, 0.78) 52%, rgba(26, 35, 50, 0.16) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  color: var(--white);
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  color: #e2e8f0;
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* ==========================================================================
+   Sección Nosotros
+   ========================================================================== */
+.about {
+  padding: 90px 0;
+  background-color: var(--white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.about-card {
+  padding: 35px 25px;
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  border-top: 4px solid var(--logo-blue);
+  transition: var(--transition);
+}
+
+.about-card:nth-child(2) {
+  border-top-color: var(--logo-green);
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.icon-box {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.about-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   Sección Servicios
+   ========================================================================== */
+.services {
+  padding: 90px 0;
+  background-color: var(--light-bg);
+}
+
+.services-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.service-column {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.border-blue { border-top: 5px solid var(--logo-blue); }
+.border-green { border-top: 5px solid var(--logo-green); }
+
+.column-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.column-header i {
+  font-size: 2rem;
+}
+
+.column-header h3 {
+  font-size: 1.4rem;
+}
+
+.service-list {
+  list-style: none;
+}
+
+.service-list li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.service-list i {
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Información Rural
+   ========================================================================== */
+.properties {
+  position: relative;
+  isolation: isolate;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  padding: 88px 0;
+  color: var(--white);
+  background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85') center 54% / cover no-repeat;
+}
+
+.properties::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(20, 35, 25, 0.92) 0%, rgba(20, 35, 25, 0.78) 52%, rgba(20, 35, 25, 0.24) 100%);
+}
+
+.rural-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.rural-copy {
+  max-width: 620px;
+}
+
+.rural-eyebrow {
+  margin-bottom: 16px;
+  color: #c5d99e;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.rural-copy h2 {
+  margin-bottom: 20px;
+  color: var(--white);
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.rural-intro {
+  max-width: 560px;
+  margin-bottom: 28px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.05rem;
+}
+
+.rural-points {
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.rural-point {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.rural-number {
+  color: #c5d99e;
+  font-weight: 700;
+}
+
+.rural-point h3 {
+  margin-bottom: 6px;
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+.rural-point p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.92rem;
+}
+
+/* ==========================================================================
+   Sección Contacto
+   ========================================================================== */
+.contact {
+  padding: 90px 0;
+  background-color: var(--dark-bg);
+  color: var(--white);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 50px;
+  align-items: center;
+}
+
+.contact-info h2 {
+  color: var(--white);
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  color: #cbd5e1;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.info-item i {
+  font-size: 1.4rem;
+  color: var(--logo-green);
+  background-color: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.info-item h4 {
+  color: var(--white);
+  font-family: var(--font-body);
+}
+
+.info-item p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.contact-form {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 8px;
+  color: var(--text-main);
+}
+
+.contact-form h3 {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  color: var(--text-main);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--logo-blue);
+}
+
+/* ==========================================================================
+   Reto interactivo rural
+   ========================================================================== */
+.field-game {
+  padding: 84px 0;
+  background-color: #edf1e8;
+  color: var(--text-main);
+}
+
+.field-game-layout {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.8fr) minmax(400px, 1.2fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.game-kicker {
+  margin-bottom: 14px;
+  color: #477a35;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.field-game-intro h2 {
+  margin-bottom: 16px;
+  font-size: 2.25rem;
+}
+
+.field-game-intro > p:not(.game-kicker):not(.game-disclaimer) {
+  margin-bottom: 24px;
+}
+
+.game-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid #cbd5c2;
+  border-bottom: 1px solid #cbd5c2;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.game-note i {
+  margin-top: 3px;
+  color: var(--logo-blue);
+}
+
+.game-disclaimer {
+  margin-top: 18px;
+  font-size: 0.78rem;
+}
+
+.game-board {
+  padding: 32px;
+  border-top: 4px solid var(--logo-green);
+  background-color: var(--white);
+  box-shadow: 0 14px 36px rgba(34, 52, 35, 0.12);
+}
+
+.game-board-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--text-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.game-board-heading p {
+  margin: 0;
+}
+
+.game-progress {
+  height: 6px;
+  margin: 12px 0 26px;
+  overflow: hidden;
+  background-color: #e7ece4;
+}
+
+.game-progress span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: var(--logo-green);
+  transition: width 250ms ease;
+}
+
+.game-category {
+  margin-bottom: 8px;
+  color: #477a35;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.game-board h3 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.game-options {
+  display: grid;
+  gap: 10px;
+}
+
+.game-answer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 52px;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  background: var(--white);
+  color: var(--text-main);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.game-answer:hover:not(:disabled),
+.game-answer:focus-visible {
+  border-color: var(--logo-blue);
+  background-color: #f3f7fc;
+}
+
+.game-answer:focus-visible,
+.game-next:focus-visible {
+  outline: 3px solid rgba(74, 139, 226, 0.35);
+  outline-offset: 2px;
+}
+
+.game-answer:disabled {
+  cursor: default;
+}
+
+.game-answer.is-correct {
+  border-color: var(--logo-green);
+  background-color: #eef6e9;
+}
+
+.game-answer.is-incorrect {
+  border-color: #bd6558;
+  background-color: #fbefed;
+}
+
+.game-answer-letter {
+  display: grid;
+  flex: 0 0 30px;
+  width: 30px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid #d9e0d5;
+  color: #477a35;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.game-feedback {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-left: 3px solid #bd6558;
+  background-color: #f7f3ef;
+  font-size: 0.92rem;
+}
+
+.game-feedback.is-success {
+  border-left-color: var(--logo-green);
+  background-color: #eef6e9;
+}
+
+.game-board [hidden] {
+  display: none;
+}
+
+.game-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 11px 16px;
+  border: 0;
+  background-color: #315d34;
+  color: var(--white);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.game-next:hover {
+  background-color: #244827;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  background-color: #111827;
+  padding: 30px 0;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.socials a {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.socials a:hover {
+  color: var(--logo-green);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    background-position: right 16px top 16px;
+    background-size: 110px auto;
+  }
+
+  .properties {
+    min-height: auto;
+    padding: 72px 0;
+    background-position: center;
+  }
+
+  .rural-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .rural-copy h2 {
+    font-size: 2rem;
+  }
+
+  .field-game {
+    padding: 64px 0;
+  }
+
+  .field-game-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .game-board {
+    padding: 24px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
