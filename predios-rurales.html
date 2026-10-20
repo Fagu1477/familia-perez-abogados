@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legalización de predios rurales | Familia Pérez S.A.S.</title>
+  <link rel="stylesheet" href="style.css.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html#home" class="logo-container">
+        <img src="logo-sin-texto.jpeg" alt="Emblema de balanza y casa de Familia Pérez S.A.S." class="site-logo">
+        <span class="brand-name">Bufete de abogados e inmobiliaria familia pérez S.A.S</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#home">INICIO</a></li>
+        <li><a href="index.html#about">QUIENES SOMOS</a></li>
+        <li><a href="index.html#services">SERVICIOS</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false">
+        <span class="theme-toggle-thumb">
+          <i class="fa-solid fa-sun theme-icon-light" aria-hidden="true"></i>
+          <i class="fa-solid fa-moon theme-icon-dark" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Seguridad jurídica para el campo</h1>
+      <p>Asesoría y acompañamiento para la formalización de predios rurales.</p>
+      <div class="hero-buttons">
+        <a href="index.html#contact" class="btn btn-primary">Solicitar asesoría</a>
+        <a href="index.html#properties" class="btn btn-secondary">Volver a la página principal</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="properties rural-info">
+      <div class="container rural-layout">
+        <div class="rural-copy">
+          <p class="rural-eyebrow">Acompañamiento inmobiliario y jurídico</p>
+          <h2>Legalización de predios rurales</h2>
+          <p class="rural-intro">Orientamos a propietarios y familias en la revisión de documentos y en los trámites relacionados con la formalización y adjudicación de títulos de propiedad.</p>
+          <a href="index.html#contact" class="btn btn-primary">Contáctenos</a>
+        </div>
+        <div class="rural-points">
+          <div class="rural-point">
+            <span class="rural-number">01</span>
+            <div>
+              <h3>Revisión de documentos</h3>
+              <p>Analizamos la documentación y los antecedentes disponibles del predio para orientar los siguientes pasos.</p>
+            </div>
+          </div>
+          <div class="rural-point">
+            <span class="rural-number">02</span>
+            <div>
+              <h3>Orientación en trámites</h3>
+              <p>Brindamos acompañamiento en gestiones relacionadas con entidades como IGAC y ANT.</p>
+            </div>
+          </div>
+          <div class="rural-point">
+            <span class="rural-number">03</span>
+            <div>
+              <h3>Atención personalizada</h3>
+              <p>Conversamos sobre las necesidades particulares de su propiedad y las opciones de asesoría disponibles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rural-services" aria-labelledby="rural-services-title">
+      <div class="container">
+        <div class="section-title">
+          <p class="rural-services-kicker">SERVICIOS TÉCNICOS PARA SU PREDIO</p>
+          <h2 id="rural-services-title">Conozca cómo podemos acompañarle</h2>
+          <p>Seleccione un servicio para consultar en qué consiste y cuándo puede ser útil.</p>
+        </div>
+
+        <div class="rural-service-tabs" role="tablist" aria-label="Servicios para predios rurales">
+          <button class="rural-service-tab is-active" id="tab-topografia" type="button" role="tab" aria-selected="true" aria-controls="panel-topografia" tabindex="0">
+            <i class="fa-solid fa-draw-polygon" aria-hidden="true"></i>
+            Topografía
+          </button>
+          <button class="rural-service-tab" id="tab-desenglobe" type="button" role="tab" aria-selected="false" aria-controls="panel-desenglobe" tabindex="-1">
+            <i class="fa-solid fa-vector-square" aria-hidden="true"></i>
+            Desenglobe
+          </button>
+          <button class="rural-service-tab" id="tab-georreferenciacion" type="button" role="tab" aria-selected="false" aria-controls="panel-georreferenciacion" tabindex="-1">
+            <i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i>
+            Georreferenciación
+          </button>
+        </div>
+
+        <div class="rural-service-panels">
+          <article class="rural-service-panel is-active" id="panel-topografia" role="tabpanel" aria-labelledby="tab-topografia" tabindex="0">
+            <div class="rural-service-icon"><i class="fa-solid fa-draw-polygon" aria-hidden="true"></i></div>
+            <div>
+              <p class="rural-service-label">Medición y representación del terreno</p>
+              <h3>Levantamiento topográfico</h3>
+              <p>Un levantamiento topográfico recoge y representa información del terreno, como su forma, dimensiones, linderos visibles y elementos relevantes. El resultado puede servir como insumo técnico para planear proyectos, revisar áreas o preparar trámites relacionados con el inmueble.</p>
+              <h4>¿Cuándo puede ser útil?</h4>
+              <ul>
+                <li>Para conocer mejor la forma y las características físicas del predio.</li>
+                <li>Cuando se necesita contrastar medidas de campo con planos o documentos existentes.</li>
+                <li>Como información de apoyo para proyectos, diseños o gestiones prediales.</li>
+              </ul>
+            </div>
+            <section class="topography-gallery" aria-label="Galería de trabajos de topografía">
+              <div class="topography-gallery-heading">
+                <div>
+                  <p class="rural-service-label">Nuestro trabajo en campo</p>
+                  <h4>Topografía rural</h4>
+                </div>
+                <p class="topography-gallery-count" id="topography-gallery-count" aria-live="polite">1 / 5</p>
+              </div>
+              <div class="topography-carousel" id="topography-carousel" role="region" aria-roledescription="carrusel" aria-label="Imágenes de trabajos topográficos">
+                <figure class="topography-slide is-active" role="group" aria-roledescription="diapositiva" aria-label="1 de 5">
+                  <img src="topografia-1-rostros-difuminados.jpeg" alt="Equipo realizando trabajo de campo en un predio rural" fetchpriority="high">
+                  <figcaption>Trabajo de campo en predios rurales</figcaption>
+                </figure>
+                <figure class="topography-slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 5" hidden>
+                  <img src="topografia-3-rostros-difuminados.jpeg" alt="Reconocimiento de terreno rural y sus linderos" loading="lazy">
+                  <figcaption>Reconocimiento del terreno y sus linderos</figcaption>
+                </figure>
+                <figure class="topography-slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 5" hidden>
+                  <img src="topografia-4-rostros-difuminados.jpeg" alt="Profesional utilizando equipo topográfico en una zona rural" loading="lazy">
+                  <figcaption>Medición topográfica en terreno rural</figcaption>
+                </figure>
+                <figure class="topography-slide" role="group" aria-roledescription="diapositiva" aria-label="4 de 5" hidden>
+                  <img src="topografia-5.jpeg" alt="Recorrido de campo para revisar un predio rural" loading="lazy">
+                  <figcaption>Recorrido y revisión del predio</figcaption>
+                </figure>
+                <figure class="topography-slide" role="group" aria-roledescription="diapositiva" aria-label="5 de 5" hidden>
+                  <img src="topografia-6-rostros-difuminados.jpeg" alt="Trabajo de campo con equipo de medición topográfica" loading="lazy">
+                  <figcaption>Equipo de medición durante el levantamiento</figcaption>
+                </figure>
+                <button class="topography-carousel-control topography-carousel-previous" type="button" aria-label="Ver imagen anterior" data-carousel-step="-1">
+                  <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <button class="topography-carousel-control topography-carousel-next" type="button" aria-label="Ver imagen siguiente" data-carousel-step="1">
+                  <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="topography-carousel-footer">
+                <div class="topography-carousel-dots" role="group" aria-label="Elegir imagen">
+                  <button class="topography-carousel-dot is-active" type="button" aria-label="Ver imagen 1" aria-current="true" data-carousel-index="0"></button>
+                  <button class="topography-carousel-dot" type="button" aria-label="Ver imagen 2" data-carousel-index="1"></button>
+                  <button class="topography-carousel-dot" type="button" aria-label="Ver imagen 3" data-carousel-index="2"></button>
+                  <button class="topography-carousel-dot" type="button" aria-label="Ver imagen 4" data-carousel-index="3"></button>
+                  <button class="topography-carousel-dot" type="button" aria-label="Ver imagen 5" data-carousel-index="4"></button>
+                </div>
+                <p>Use las flechas para recorrer las imágenes</p>
+              </div>
+            </section>
+          </article>
+
+          <article class="rural-service-panel" id="panel-desenglobe" role="tabpanel" aria-labelledby="tab-desenglobe" tabindex="0" hidden>
+            <div class="rural-service-icon"><i class="fa-solid fa-vector-square" aria-hidden="true"></i></div>
+            <div>
+              <p class="rural-service-label">Orientación para dividir un predio</p>
+              <h3>Desenglobe de predios</h3>
+              <p>El desenglobe es el proceso de separar una parte de un predio para que pueda identificarse de manera independiente en los registros correspondientes. La propuesta de división requiere revisar la situación jurídica, catastral y técnica del inmueble, además de las normas y requisitos aplicables en el municipio y ante las entidades competentes.</p>
+              <h4>¿Cómo podemos acompañarle?</h4>
+              <ul>
+                <li>Revisar los documentos disponibles y la información del predio.</li>
+                <li>Orientar sobre la información técnica que puede ser necesaria para estudiar la división.</li>
+                <li>Apoyar la preparación y seguimiento de la gestión ante las entidades correspondientes.</li>
+              </ul>
+              <p class="rural-service-note">La viabilidad y los requisitos dependen de cada predio y de la normativa aplicable; la división no se entiende aprobada hasta completar los trámites requeridos.</p>
+            </div>
+          </article>
+
+          <article class="rural-service-panel" id="panel-georreferenciacion" role="tabpanel" aria-labelledby="tab-georreferenciacion" tabindex="0" hidden>
+            <div class="rural-service-icon"><i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i></div>
+            <div>
+              <p class="rural-service-label">Ubicación espacial de puntos y linderos</p>
+              <h3>Georreferenciación</h3>
+              <p>La georreferenciación permite asociar puntos, vértices o límites de un predio con coordenadas dentro de un sistema de referencia. Estos datos ayudan a ubicar el inmueble en el territorio y pueden complementar planos, levantamientos y documentación predial.</p>
+              <h4>¿Qué se debe tener en cuenta?</h4>
+              <ul>
+                <li>La precisión depende del método, los equipos, las condiciones del terreno y el sistema de referencia utilizado.</li>
+                <li>Las coordenadas deben revisarse junto con los antecedentes y documentos del predio.</li>
+                <li>Para trámites, hay que confirmar el formato y los requisitos vigentes exigidos por la entidad receptora.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="rural-services-cta">
+          <p>¿Necesita orientación para su predio?</p>
+          <a href="index.html#contact" class="btn btn-primary">Solicitar asesoría</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; Creado por LUISA AMARIS coordinadora regional. Todos los derechos reservados  .</p>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="theme.js" defer></script>
+  <script src="rural-services.js" defer></script>
+  <script src="topography-carousel.js" defer></script>
+</body>
+</html>
