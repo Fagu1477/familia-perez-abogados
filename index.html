@@ -17,13 +17,20 @@
   <nav class="navbar">
     <div class="container nav-container">
       <a href="#" class="logo-container">
-        <img src="logo.jpeg" alt="Bufete de abogados e inmobiliaria Familia Pérez S.A.S" class="site-logo">
+        <img src="logo-sin-texto.jpeg" alt="Emblema de balanza y casa de Familia Pérez S.A.S." class="site-logo">
+        <span class="brand-name">Bufete de abogados e inmobiliaria familia pérez S.A.S</span>
       </a>
       <ul class="nav-links">
         <li><a href="#home">INICIO</a></li>
         <li><a href="#about">QUIENES SOMOS</a></li>
         <li><a href="#services">SERVICIOS</a></li>
       </ul>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false">
+        <span class="theme-toggle-thumb">
+          <i class="fa-solid fa-sun theme-icon-light" aria-hidden="true"></i>
+          <i class="fa-solid fa-moon theme-icon-dark" aria-hidden="true"></i>
+        </span>
+      </button>
     </div>
   </nav>
 
@@ -34,7 +41,7 @@
       <h1>"Mas que un bufete,<br>Una familia a su servicio"</h1>
       <p>Tu tranquilidad legal, nuestro compromiso</p>
       <div class="hero-buttons">
-        <a href="#properties" class="btn btn-primary">Seguridad jurídica para el campo</a>
+        <a href="#properties" class="btn btn-primary">Seguridad jurídica rural/urbana</a>
         <a href="#contact" class="btn btn-secondary">Contactanos</a>
       </div>
     </div>
@@ -45,7 +52,6 @@
     <div class="container">
       <div class="section-title">
         <h2>POR QUE ESCOGER NUESTROS SERVICIOS</h2>
-        <p>Combining top-tier real estate expertise with rigorous legal protection under one roof.</p>
       </div>
       <div class="about-grid">
         <div class="about-card">
@@ -113,6 +119,49 @@
     </div>
   </section>
 
+  <section id="personas" class="collection-proposal" aria-labelledby="collection-title">
+    <div class="container collection-layout">
+      <div class="collection-intro">
+        <p class="collection-eyebrow">PERSONAS Y CONJUNTOS RESIDENCIALES</p>
+        <h2 id="collection-title">Propuesta de recuperación de cartera</h2>
+        <p class="collection-tagline">Convierta las cuotas atrasadas en flujo de caja para su conjunto residencial o condominio.</p>
+        <p class="collection-description">Apoyamos a conjuntos residenciales y condominios en la revisión de obligaciones vencidas y en la definición de alternativas de gestión, con comunicación clara y atención a las circunstancias de cada caso.</p>
+        <a href="#contact" class="btn btn-primary">Solicitar una evaluación</a>
+      </div>
+
+      <div class="collection-details">
+        <article class="collection-card">
+          <span class="collection-icon"><i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i></span>
+          <div>
+            <h3>Revisión de la cartera</h3>
+            <p>Organizamos la información de las cuotas pendientes y revisamos los soportes disponibles para conocer el estado de cada obligación.</p>
+          </div>
+        </article>
+        <article class="collection-card">
+          <span class="collection-icon"><i class="fa-solid fa-comments" aria-hidden="true"></i></span>
+          <div>
+            <h3>Gestión de recuperación</h3>
+            <p>Proponemos acciones de acercamiento y alternativas de pago acordes con la situación del conjunto y de cada deudor.</p>
+          </div>
+        </article>
+        <article class="collection-card">
+          <span class="collection-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></span>
+          <div>
+            <h3>Acompañamiento jurídico</h3>
+            <p>Cuando corresponda, orientamos sobre las opciones legales disponibles y los pasos a seguir conforme a los documentos y la normativa aplicable.</p>
+          </div>
+        </article>
+        <p class="collection-disclaimer">Cada caso requiere una revisión particular. La gestión no garantiza la recuperación total ni inmediata de las sumas adeudadas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="empresas" class="business-placeholder" aria-labelledby="business-title">
+    <div class="container">
+      <h2 id="business-title">Empresas</h2>
+    </div>
+  </section>
+
   <!-- Featured Properties Section -->
   <section id="properties" class="properties rural-info">
     <div class="container rural-layout">
@@ -120,7 +169,7 @@
         <p class="rural-eyebrow">Seguridad jurídica para el campo.</p>
         <h2>Legalización de predios rurales</h2>
         <p class="rural-intro">Brindamos asesoría y acompañamiento integral para la formalización y adjudicacion de tíulos de propiedad, utilizando tecnología topográfica de ultima generación, con el fon de garantizar la seguridad jurídica de los predios rurales y el bienestar de sus familias.</p>
-        <a href="#contact" class="btn btn-primary">Solicitar asesoría</a>
+        <a href="predios-rurales.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Solicitar asesoría topográficas</a>
       </div>
       <div class="rural-points">
         <div class="rural-point">
@@ -193,6 +242,7 @@
         <div class="form-group">
           <label for="service">Tipo de asesoría</label>
           <select id="service">
+            <option>Recuperación de cartera para conjuntos residenciales</option>
             <option>Legalización o adjudicación de predios rurales</option>
             <option>Trámites notariales, IGAC o ANT</option>
             <option>Sucesiones, hipotecas o permutas</option>
@@ -252,6 +302,7 @@
     </div>
   </footer>
 
+  <script src="theme.js" defer></script>
   <script src="game.js" defer></script>
 
 </body>
