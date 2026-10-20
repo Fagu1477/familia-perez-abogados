@@ -137,18 +137,19 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 0;
+  padding: 12px 0;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
 }
 
 .site-logo {
-  height: 180px;
-  width: auto;
+  width: 165px;
+  height: 78px;
   object-fit: contain;
 }
 
@@ -158,9 +159,11 @@ a {
 }
 
 .brand-name {
+  max-width: 280px;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.08rem;
+  line-height: 1.25;
   color: var(--logo-green);
 }
 
@@ -188,6 +191,57 @@ a {
   color: var(--logo-blue);
 }
 
+.theme-toggle {
+  display: flex;
+  flex: 0 0 60px;
+  align-items: center;
+  width: 60px;
+  height: 34px;
+  padding: 3px;
+  border: 2px solid #00a5df;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid rgba(0, 165, 223, 0.35);
+  outline-offset: 3px;
+}
+
+.theme-toggle-thumb {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50%;
+  background: #00a5df;
+  color: var(--white);
+  font-size: 0.8rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.theme-toggle .theme-icon-light {
+  display: inline-block;
+}
+
+.theme-toggle .theme-icon-dark {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle-thumb {
+  transform: translateX(24px);
+}
+
+html[data-theme="dark"] .theme-toggle .theme-icon-light {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle .theme-icon-dark {
+  display: inline-block;
+}
+
 .btn-nav {
   background-color: var(--logo-blue);
   color: var(--white) !important;
@@ -204,7 +258,7 @@ a {
    ========================================================================== */
 .hero {
   height: 85vh;
-  background: #f7f7f7 url('logo.jpeg') right 8% center / clamp(220px, 30vw, 360px) auto no-repeat;
+  background: #f7f7f7 url('logo-sin-texto.jpeg') right 8% center / clamp(180px, 24vw, 280px) auto no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -343,6 +397,94 @@ a {
   font-size: 0.9rem;
 }
 
+/* Recuperación de cartera residencial */
+.collection-proposal {
+  padding: 88px 0;
+  background: linear-gradient(135deg, #f4f7fa 0%, #edf3e9 100%);
+}
+
+.collection-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.collection-intro {
+  max-width: 520px;
+}
+
+.collection-eyebrow {
+  margin-bottom: 14px;
+  color: #477a35;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.collection-intro h2 {
+  margin-bottom: 16px;
+  font-size: 2.25rem;
+}
+
+.collection-tagline {
+  margin-bottom: 14px;
+  color: var(--text-main);
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.collection-description {
+  margin-bottom: 24px;
+}
+
+.collection-details {
+  display: grid;
+  gap: 14px;
+}
+
+.collection-card {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--white);
+}
+
+.collection-icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 50%;
+  background-color: rgba(59, 155, 0, 0.1);
+  color: var(--logo-green);
+  font-size: 1.1rem;
+}
+
+.collection-card h3 {
+  margin: 2px 0 6px;
+  font-size: 1.05rem;
+}
+
+.collection-disclaimer {
+  font-size: 0.82rem;
+}
+
+.business-placeholder {
+  min-height: 90px;
+  padding: 28px 0;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--white);
+}
+
+.business-placeholder h2 {
+  font-size: 1.4rem;
+}
+
 /* ==========================================================================
    Información Rural
    ========================================================================== */
@@ -424,6 +566,306 @@ a {
   margin: 0;
   color: rgba(255, 255, 255, 0.82);
   font-size: 0.92rem;
+}
+
+/* Servicios técnicos rurales */
+.rural-services {
+  padding: 88px 0;
+  background-color: var(--light-bg);
+}
+
+.rural-services .section-title {
+  max-width: 720px;
+  margin: 0 auto 36px;
+}
+
+.rural-services .section-title h2 {
+  margin-bottom: 14px;
+}
+
+.rural-services-kicker,
+.rural-service-label {
+  color: #477a35;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.rural-services-kicker {
+  margin-bottom: 10px;
+}
+
+.rural-service-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.rural-service-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 10px 18px;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background-color: var(--white);
+  color: var(--text-main);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.rural-service-tab:hover,
+.rural-service-tab:focus-visible {
+  border-color: var(--logo-blue);
+  outline: none;
+}
+
+.rural-service-tab.is-active {
+  border-color: var(--logo-green);
+  background-color: var(--logo-green);
+  color: var(--white);
+}
+
+.rural-service-panels {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.rural-service-panel {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 24px;
+  padding: 36px;
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: 0 8px 28px rgba(34, 52, 35, 0.08);
+  animation: rural-panel-enter 220ms ease-out;
+}
+
+.rural-service-panel[hidden] {
+  display: none;
+}
+
+.rural-service-icon {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  place-items: center;
+  border-radius: 50%;
+  background-color: rgba(59, 155, 0, 0.1);
+  color: var(--logo-green);
+  font-size: 1.5rem;
+}
+
+.rural-service-label {
+  margin-bottom: 8px;
+}
+
+.rural-service-panel h3 {
+  margin-bottom: 12px;
+  font-size: 1.65rem;
+}
+
+.rural-service-panel h4 {
+  margin: 22px 0 8px;
+  color: var(--text-main);
+}
+
+.rural-service-panel p:not(.rural-service-label) {
+  color: var(--text-light);
+}
+
+.rural-service-panel ul {
+  display: grid;
+  gap: 9px;
+  padding-left: 20px;
+  color: var(--text-main);
+}
+
+.rural-service-panel li::marker {
+  color: var(--logo-green);
+}
+
+.rural-service-panel .rural-service-note {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-left: 3px solid var(--logo-blue);
+  background-color: var(--light-bg);
+  font-size: 0.9rem;
+}
+
+.topography-gallery {
+  grid-column: 1 / -1;
+  margin-top: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--white);
+  box-shadow: 0 12px 32px rgba(26, 35, 50, 0.12);
+}
+
+.topography-gallery-heading,
+.topography-carousel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+}
+
+.topography-gallery-heading h4 {
+  margin: 2px 0 0;
+  font-size: 1.1rem;
+}
+
+.topography-gallery-heading .rural-service-label {
+  margin-bottom: 0;
+}
+
+.topography-gallery-count,
+.topography-carousel-footer > p {
+  color: var(--text-light);
+  font-size: 0.82rem;
+}
+
+.topography-carousel {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #17221a;
+}
+
+.topography-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+}
+
+.topography-slide[hidden] {
+  display: none;
+}
+
+.topography-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 48%;
+}
+
+.topography-slide::after {
+  position: absolute;
+  inset: 35% 0 0;
+  background: linear-gradient(transparent, rgba(10, 20, 14, 0.78));
+  content: "";
+  pointer-events: none;
+}
+
+.topography-slide figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 76px;
+  bottom: 24px;
+  left: 24px;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.45);
+}
+
+.topography-carousel-control {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  background: rgba(17, 24, 39, 0.62);
+  color: var(--white);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.topography-carousel-control:hover,
+.topography-carousel-control:focus-visible {
+  background: var(--logo-green);
+}
+
+.topography-carousel-control:focus-visible,
+.topography-carousel-dot:focus-visible {
+  outline: 3px solid var(--logo-blue);
+  outline-offset: 3px;
+}
+
+.topography-carousel-previous {
+  left: 16px;
+}
+
+.topography-carousel-next {
+  right: 16px;
+}
+
+.topography-carousel-footer {
+  min-height: 58px;
+}
+
+.topography-carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.topography-carousel-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #c5cdd5;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.topography-carousel-dot.is-active {
+  width: 24px;
+  border-radius: 999px;
+  background-color: var(--logo-green);
+}
+
+.rural-services-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.rural-services-cta p {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+@keyframes rural-panel-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ==========================================================================
@@ -748,15 +1190,137 @@ footer {
   color: var(--logo-green);
 }
 
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --text-main: #e5eaf0;
+  --text-light: #b5c0cc;
+  --light-bg: #263241;
+  --border-color: #3b4858;
+}
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] .about {
+  background-color: #1a2332;
+}
+
+html[data-theme="dark"] .navbar {
+  background-color: #1a2332;
+}
+
+html[data-theme="dark"] .services,
+html[data-theme="dark"] .field-game,
+html[data-theme="dark"] .rural-services,
+html[data-theme="dark"] .collection-proposal {
+  background-color: #202b39;
+}
+
+html[data-theme="dark"] .about-card,
+html[data-theme="dark"] .service-column,
+html[data-theme="dark"] .contact-form,
+html[data-theme="dark"] .game-board,
+html[data-theme="dark"] .rural-service-panel,
+html[data-theme="dark"] .rural-service-tab,
+html[data-theme="dark"] .collection-card {
+  background-color: #263241;
+}
+
+html[data-theme="dark"] .collection-proposal {
+  background-image: linear-gradient(135deg, #202b39 0%, #25352c 100%);
+}
+
+html[data-theme="dark"] .business-placeholder {
+  background-color: #1a2332;
+}
+
+html[data-theme="dark"] .rural-service-tab.is-active {
+  background-color: var(--logo-green);
+}
+
+html[data-theme="dark"] .rural-service-panel .rural-service-note {
+  background-color: #202b39;
+}
+
+html[data-theme="dark"] .topography-gallery {
+  border-color: var(--border-color);
+  background-color: #263241;
+}
+
+html[data-theme="dark"] .form-group input,
+html[data-theme="dark"] .form-group select,
+html[data-theme="dark"] .form-group textarea {
+  background-color: #1a2332;
+  color: var(--text-main);
+}
+
+html[data-theme="dark"] .game-note {
+  border-color: #465363;
+}
+
+html[data-theme="dark"] .game-progress {
+  background-color: #3b4858;
+}
+
+html[data-theme="dark"] .game-answer {
+  background-color: #1a2332;
+  color: var(--text-main);
+}
+
+html[data-theme="dark"] .game-answer:hover:not(:disabled),
+html[data-theme="dark"] .game-answer:focus-visible {
+  background-color: #303f51;
+}
+
+html[data-theme="dark"] .game-answer.is-correct,
+html[data-theme="dark"] .game-feedback.is-success {
+  background-color: #203827;
+}
+
+html[data-theme="dark"] .game-answer.is-incorrect {
+  background-color: #402b2b;
+}
+
+html[data-theme="dark"] .game-feedback {
+  background-color: #322f2a;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
 
+  .site-logo {
+    width: 120px;
+    height: 58px;
+  }
+
+  .logo-container {
+    gap: 8px;
+  }
+
+  .brand-name {
+    max-width: 105px;
+    font-size: 0.72rem;
+  }
+
+  .theme-toggle {
+    flex-basis: 52px;
+    width: 52px;
+    height: 30px;
+  }
+
+  .theme-toggle-thumb {
+    width: 20px;
+    height: 20px;
+  }
+
+  html[data-theme="dark"] .theme-toggle-thumb {
+    transform: translateX(20px);
+  }
+
   .hero {
     background-position: right 16px top 16px;
-    background-size: 110px auto;
+    background-size: 90px auto;
   }
 
   .properties {
@@ -768,6 +1332,86 @@ footer {
   .rural-layout {
     grid-template-columns: 1fr;
     gap: 36px;
+  }
+
+  .collection-proposal {
+    padding: 64px 0;
+  }
+
+  .collection-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .collection-intro h2 {
+    font-size: 1.9rem;
+  }
+
+  .collection-card {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .collection-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .rural-services {
+    padding: 64px 0;
+  }
+
+  .rural-service-tabs {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .rural-service-tab {
+    justify-content: flex-start;
+  }
+
+  .rural-service-panel {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px;
+  }
+
+  .topography-gallery {
+    margin-top: 4px;
+  }
+
+  .topography-carousel {
+    aspect-ratio: 4 / 3;
+  }
+
+  .topography-carousel-control {
+    width: 36px;
+    height: 36px;
+  }
+
+  .topography-carousel-previous {
+    left: 10px;
+  }
+
+  .topography-carousel-next {
+    right: 10px;
+  }
+
+  .topography-slide figcaption {
+    right: 18px;
+    bottom: 16px;
+    left: 18px;
+    font-size: 0.9rem;
+  }
+
+  .topography-gallery-heading,
+  .topography-carousel-footer {
+    padding: 14px;
+  }
+
+  .topography-carousel-footer > p {
+    display: none;
   }
 
   .rural-copy h2 {
