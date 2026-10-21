@@ -157,8 +157,50 @@
   </section>
 
   <section id="empresas" class="business-placeholder" aria-labelledby="business-title">
-    <div class="container">
-      <h2 id="business-title">Empresas</h2>
+    <div class="container business-layout">
+      <div class="business-intro">
+        <p class="business-eyebrow">ASESORÍA JURÍDICA PARA EMPRESAS</p>
+        <h2 id="business-title">Crezca con claridad y respaldo legal</h2>
+        <p>Acompañamos a pequeñas y medianas empresas a ordenar sus asuntos jurídicos y avanzar paso a paso en el cumplimiento de las obligaciones que aplican a su actividad. La orientación se ajusta a la realidad, las prioridades y la capacidad de cada negocio.</p>
+        <a href="#contact" class="btn btn-primary">Conversemos sobre su empresa</a>
+      </div>
+
+      <div class="business-content">
+        <div class="business-pillars">
+          <article class="business-card">
+            <span class="collection-icon"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>
+            <div>
+              <h3>Práctico</h3>
+              <p>Recomendaciones claras y acciones que pueda aplicar en su operación diaria.</p>
+            </div>
+          </article>
+          <article class="business-card">
+            <span class="collection-icon"><i class="fa-solid fa-sliders" aria-hidden="true"></i></span>
+            <div>
+              <h3>Gradual y flexible</h3>
+              <p>Un plan por etapas, priorizado según el tamaño, la actividad y los recursos de su empresa.</p>
+            </div>
+          </article>
+          <article class="business-card">
+            <span class="collection-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+            <div>
+              <h3>Preventivo</h3>
+              <p>Identificamos asuntos que conviene revisar a tiempo para reducir riesgos y evitar dificultades futuras.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="business-benefits">
+          <h3>¿Qué puede aportar este acompañamiento?</h3>
+          <ul>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Ayuda a reconocer y atender obligaciones para reducir el riesgo de sanciones evitables.</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Favorece el orden de documentos, acuerdos y procesos internos.</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Da mayor claridad jurídica al contratar y establecer acuerdos comerciales.</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Contribuye a tomar decisiones y proyectar el crecimiento sobre bases legales más sólidas.</li>
+          </ul>
+          <p class="business-disclaimer">El alcance de la asesoría depende de la actividad y las circunstancias de cada empresa. La orientación no sustituye la revisión de cada caso ni garantiza resultados específicos.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -229,19 +271,24 @@
         </div>
       </div>
 
-      <form class="contact-form">
+      <form class="contact-form" id="contact-form" action="https://formsubmit.co/abogadosfp2705@gmail.com" method="POST">
         <h3>Cuéntenos cómo podemos ayudarle</h3>
+        <input type="hidden" name="_subject" value="Nueva solicitud de asesoría desde el sitio web">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_url" value="https://fagu1477.github.io/familia-perez-abogados/">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
         <div class="form-group">
           <label for="name">Nombre completo</label>
-          <input type="text" id="name" placeholder="Su nombre y apellido" required>
+          <input type="text" id="name" name="name" placeholder="Su nombre y apellido" autocomplete="name" maxlength="120" required>
         </div>
         <div class="form-group">
           <label for="email">Correo electrónico</label>
-          <input type="email" id="email" placeholder="nombre@ejemplo.com" required>
+          <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" autocomplete="email" maxlength="254" required>
         </div>
         <div class="form-group">
           <label for="service">Tipo de asesoría</label>
-          <select id="service">
+          <select id="service" name="service" required>
+            <option value="" selected disabled>Seleccione el tipo de asesoría</option>
             <option>Recuperación de cartera para conjuntos residenciales</option>
             <option>Legalización o adjudicación de predios rurales</option>
             <option>Trámites notariales, IGAC o ANT</option>
@@ -252,9 +299,10 @@
         </div>
         <div class="form-group">
           <label for="message">¿En qué consiste su consulta?</label>
-          <textarea id="message" rows="4" placeholder="Describa brevemente el trámite o proyecto en el que necesita asesoría." required></textarea>
+          <textarea id="message" name="message" rows="4" maxlength="5000" placeholder="Describa brevemente el trámite o proyecto en el que necesita asesoría." required></textarea>
         </div>
         <button type="submit" class="btn btn-primary btn-block">Enviar solicitud</button>
+        <p class="contact-form-privacy">Al enviar, su nombre, correo y consulta se transmitirán mediante FormSubmit. En el primer envío, puede ser necesario confirmar la dirección de recepción.</p>
       </form>
     </div>
   </section>
